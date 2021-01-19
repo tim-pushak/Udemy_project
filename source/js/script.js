@@ -13,7 +13,7 @@ const personalMovieDb = {
 
 for (let i = 0; i < 2; i++) {
     const a = prompt('Який останній фільм ви бачили?', ''),
-          b = prompt('У скільки його оціните?', '');
+        b = prompt('У скільки його оціните?', '');
 
     if (a != null && b != null && a != '' && b != '' && a.length < 50) {
         personalMovieDb.movies[a] = b;
@@ -24,6 +24,22 @@ for (let i = 0; i < 2; i++) {
     }
 }
 
+function ret() {
+    let num = 150;
+
+    //
+
+    return num;
+}
+
+const anotherNum = ret();
+console.log(anotherNum);
+
+vasya();
+
+const vasya = function() {
+    console.log("Hello");
+};
 //OR//
 
 // let i = 0;
@@ -96,7 +112,7 @@ console.log(personalMovieDb);
 while (num <= 55) { 
     console.log(num);  
     num++;
-} */ 
+} */
 
 //2///
 
