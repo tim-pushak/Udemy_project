@@ -24,22 +24,7 @@ for (let i = 0; i < 2; i++) {
     }
 }
 
-function ret() {
-    let num = 150;
 
-    //
-
-    return num;
-}
-
-const anotherNum = ret();
-console.log(anotherNum);
-
-vasya();
-
-const vasya = function() {
-    console.log("Hello");
-};
 //OR//
 
 // let i = 0;
