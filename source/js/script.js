@@ -1,6 +1,8 @@
 "use strict";
 
 
+
+
 let numberOfFilms;
 
 function start() {
@@ -14,13 +16,24 @@ function start() {
 start();
 
 
+
+
+
+
+
 const personalMovieDb = {
     count: numberOfFilms,
     movies: {},
     actors: {},
-    genres: [writeYourGenres()],
+    genres: [],
     privat: false
 };
+
+
+
+
+
+
 
 function rememberMyFilms() {
     for (let i = 0; i < 2; i++) {
@@ -33,12 +46,15 @@ function rememberMyFilms() {
         } else {
             console.log('error');
             i--;
-
         }
     }
 }
 
 rememberMyFilms();
+
+
+
+
 
 
 
@@ -58,24 +74,56 @@ detectPersonalLevel();
 
 
 
-function showMyDB(privat) {
-    if (privat == false) {
+
+
+
+
+
+function showMyDB(hidden) {
+    if (!hidden) {
         console.log(personalMovieDb);
-    } else if (private == true) {
-        console.log("Вася ти, а не програміст!");
     }
 }
-showMyDB();
 
-function writeYourGenres(numberInQueue) {
-    let yourGenres = prompt(`Ваш любимий жанр под номером ${numberInQueue}`);
-    return yourGenres;
+showMyDB(personalMovieDb.privat);
+
+
+
+
+
+console.log(personalMovieDb);
+
+
+
+
+
+
+function writeYourGenres() {
+    for (let i = 1; i <= 3; i++) {
+        //don`t forget that you can type code like this and it will be works
+        /* personalMovieDb.genres[i - 1] = prompt(`Ваш любимий жанр под номером ${i}`); */
+        
+        // but this code is the most understandble
+        const yourGenres = prompt(`Ваш любимий жанр под номером ${i}`);
+
+        personalMovieDb.genres[i - 1] = yourGenres; // -1 because user don`t know that in js first number is 0, that`s why on the top i type (let i = 1; i <= 3; i++)
+        
+
+
+        // i write down "if", because it`s easy to use 
+        if (yourGenres != null && yourGenres != '' && yourGenres.length < 50) {
+            console.log('done');
+        } else {
+            console.log('error');
+            i--;
+        }
+    }
 }
 
 writeYourGenres();
-writeYourGenres();
 
-console.log(personalMovieDb);
+
+
 
 
 
