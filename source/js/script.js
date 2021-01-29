@@ -186,7 +186,6 @@ for (let key in options) {
     if(typeof(options[key]) === 'object') {
         for (let i in options[key]) {
             console.log(`Property ${i} have value ${options[key][i]}`);
-            
         }
     } else {
         console.log(`Property ${key} have value ${options[key]}`);
