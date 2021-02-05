@@ -1,7 +1,45 @@
 "use strict";
 
-//ARRAYES (масиви) //
+// SPREAD operator ES6 - ES9 //
 
+let a = 5;
+    b = a;
+
+b = b + 5;
+
+console.log(b);
+
+const obj = {
+    a: 5,
+    b: 1
+};
+
+const copy = obj;
+
+copy.a = 10;
+
+console.log(copy);
+console.log(obj);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//ARRAYES (масиви) //
+/* 
 const arr = [1, 33, 24, 5, 8];
 
 arr.sort(compareNum);
@@ -10,7 +48,7 @@ function compareNum(a, b) {
     return a - b;
 }
 
-console.log(arr);
+console.log(arr); */
 
 /* 
 // arr.pop();
