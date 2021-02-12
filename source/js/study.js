@@ -50,7 +50,7 @@ console.log(2 && 1 && null && 0 && undefined); // browser read this code from le
 
 /* 8) !! (2 && 3) === (2 && 3)? //no
 
-// ...2 && 3... mean that always return last value // in this case 3 //
+// ...2 && 3... mean that always return last value // in this case 3 // 
 
 // alert( null || 2 && 3 || 4); // 3 // "&&" is more priority then "||" // (just search in internet "приорітети в js" and so on) //
 // alert( undefined || 2 && "vasya" || 4); // vasya // важлива річ: "||" запинається на "правді" і як тільки він дійшов до значення з "true" то він далі не читає код бо немає потреби // (так само тільки навпки з "&&", як тільки  знаходить "брехню" то перестає читати код далі) //
