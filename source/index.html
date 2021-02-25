@@ -33,7 +33,26 @@
 
     <a class="linkA" target="blank"  href="https://www.google.com">GOOGLE</a>
 
+    <div class="wraper">
+        <div class="first">
+            <button></button>
+            <button id="current"></button>
+            <button></button>
+        </div>
 
+        <div class="second">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li data-current="3">3</li> <!-- "data-" it's new feature in html5, after data- you can type name, also value. (data-current - coorectly), (data-current="3" - correctly) -->
+
+                <li>4</li>
+                <li>5</li>
+            </ul>
+        </div>
+
+        <div class="third"></div>
+    </div>
     
 
    <style>       
@@ -49,7 +68,7 @@
         }
    </style>
     
-    <!-- <script src="js/script.js"></script> --> 
+    <!-- <script src="js/script.js"></script> -->
     <script src="js/study.js" defer></script> <!-- I add defer because another way 'append' doesn't work -->
 </body>
 </html>
