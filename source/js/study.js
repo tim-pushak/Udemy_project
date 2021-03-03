@@ -4,6 +4,57 @@
 
 
 
+
+
+
+// (34) Events on Smartphones
+
+//6
+
+// touchstart
+// touchmove
+// touchend
+// touchenter
+// touchleave
+// touchcancel
+
+// та велика обгортка (window.addEve....) треба для того щоб ми точно знали що dom tree готове
+
+// window.addEventListener('DOMContentLoaded', () => {
+//     const box = document.querySelector('.box');
+
+//     box.addEventListener('touchstart', (e) => { // коли людина доторкнулась
+//         e.preventDefault(); //радиться писати цю строчку по замовчуванню кожен раз
+
+//         console.log('Start');
+//         // console.log(e.touches);
+//         // console.log(e.targetTouches);
+//         // console.log(e.changedTouches);
+//     });
+
+//     box.addEventListener('touchmove', (e) => { // коли натиснула, тримає і водить по екрану
+//         e.preventDefault(); //радиться писати цю строчку по замовчуванню кожен раз
+
+//         console.log('Move');
+//     });
+
+//     box.addEventListener('touchend', (e) => { // момент коли користувач відпустив палець
+//         e.preventDefault(); //радиться писати цю строчку по замовчуванню кожен раз
+
+//         console.log('End');
+//     });
+// }); 
+
+// touches - дає список загальної кількості пальців, які зараз взаємодіють з екраном (коли людина натиснула і тримає)
+// targetTouches - дає список загальної кількості пальців, які зараз взаємодіють з конкретним елементом на сторінці (коли людина натиснула і тримає)
+// changedTouches - список загальної пальців, які зараз приймають участь в поточній події (виведе палець який людина забрала з екрану, навіть якщо ще 4 пальці залишилися)
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
 // (33) practive with web-site
 
 // (32) Navigation DOM
@@ -79,7 +130,7 @@
 
 
 
-/* 
+/*
 // (31) Events
 
 // preventDefault();
@@ -104,11 +155,11 @@ const deleteElement = (e) => {
 };
 
 // btn.addEventListener('click', deleteElement); // deleteElement without '()'
-// overlay.addEventListener('click', deleteElement); 
+// overlay.addEventListener('click', deleteElement);
 
 // and now if I wanna do these things for all elements
 btns.forEach(btn => {
-    btn.addEventListener('click', deleteElement, {once: true}); 
+    btn.addEventListener('click', deleteElement, {once: true});
 });
 
 /////////////////////////////////////////////////
@@ -140,10 +191,10 @@ link.addEventListener('click', function(event) {
       body = document.body;
 
 console.dir(box); */
-/* 
+/*
 box.style.backgroundColor = 'blue';
 btns[1].style.borderRadius = '100%'; // correct
-// btns.style.borderRadius = '100%'; // incorrect 
+// btns.style.borderRadius = '100%'; // incorrect
 */
 
 // THE SAME HERE ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -151,7 +202,7 @@ btns[1].style.borderRadius = '100%'; // correct
 
 /* box.style.cssText = 'background-color: red; font-size: 25px'; // when you have to write more than one css style
 
-let num = 45; // very usable thing when you have to write smth like this, and don't forget about `` 
+let num = 45; // very usable thing when you have to write smth like this, and don't forget about ``
 let color = 'red';
 let radius = 100;
 box.style.cssText = `background-color: ${color}; font-size: ${num}px`;
@@ -169,7 +220,7 @@ hearts.forEach(item => {
     hearts[i].style.fontSize = '20px';
     hearts[i].style.backgroundColor = 'blue';
     hearts[i].style.fontWeight = 'bold';
-} */ // of course, in addition, I can make cicle, but that's not modern solution(decision) 
+} */ // of course, in addition, I can make cicle, but that's not modern solution(decision)
 
 
 
@@ -221,7 +272,7 @@ hearts.forEach(item => {
 
 
 
- 
+
 
 // THAT'S HOW CAN I REMOVE SMTH ///////////////////////////
 // vasya[1].remove(); // remove(); 
@@ -283,7 +334,7 @@ bomko[2].replaceWith(text1); */
 
 
 
-/* 
+/*
 // (28) Get elements from the page
 
 // by ID
@@ -291,8 +342,8 @@ const box = document.getElementById('box');
 console.log(box);
 
 // by TagName
-const btns = document.getElementsByTagName('button'); // now we get not just one element, but arrive or "HTML Collection()", with different elements, that page had with tag "button" 
-const btns2 = document.getElementsByTagName('button');    
+const btns = document.getElementsByTagName('button'); // now we get not just one element, but arrive or "HTML Collection()", with different elements, that page had with tag "button"
+const btns2 = document.getElementsByTagName('button');
 
 console.log(btns);
 console.log(btns2[2]); // if i wanna just only second button and this btn have index "1"
@@ -313,8 +364,8 @@ console.log(vasya);
 // тут виводиться всі елементи окремо
 const hearts = document.querySelectorAll('.heart'); // note that i type "." before class name and don't forget about ''
 
-hearts.forEach(item => { // callback function where "item" is "hearts" 
-    console.log(item); 
+hearts.forEach(item => { // callback function where "item" is "hearts"
+    console.log(item);
 }); // i can also just write console.log(hearts); but method "forEach" can allow me to return each elements singly
 
 // а тут виводиться тільки перший елемент зі списку
@@ -360,10 +411,10 @@ alert( x++ ); // 5 but if i do this way ( ++x ) it will be 6;
 
 /* 3)
 let y = 1;
-let x = y = 2; // note that, this code you must read from right to left 
-alert(x); // 2 
+let x = y = 2; // note that, this code you must read from right to left
+alert(x); // 2
 */
- 
+
 
 /* 4)
 // [] + 1 + 2;
@@ -372,22 +423,22 @@ alert(x); // 2
 */
 
 
-/* 5) 
+/* 5)
 alert( "1"[0] ); // 1       // because [0] it's 0 index
 alert( "vasya"[0] ) // v     // because v had index 0
 */
 
 
-/* 6) 
+/* 6)
 // 2 && 1 && null && 0 && undefined;
-console.log(2 && 1 && null && 0 && undefined); // browser read this code from left ot right, and operator "&&" mean that if 2 is true &&(and) if 1 is true and so on.. 
+console.log(2 && 1 && null && 0 && undefined); // browser read this code from left ot right, and operator "&&" mean that if 2 is true &&(and) if 1 is true and so on..
                                                // but if browser find "false", it will be problem. In this case null is nothing and === "false"
                                                // (&&(і) запинається на брехні а ||(або) на правді)
                                                // that's why result is "null"
 */
 
 
-/* 7) 
+/* 7)
 
 // console.log( !!(1 && 2) === (1 && 2) ); // false // not the same, because if we see "!!" before smth, it make boolean. 1 && 2 just a numbers but with "!!" it's boolean(true/false)
 
@@ -396,7 +447,7 @@ console.log(2 && 1 && null && 0 && undefined); // browser read this code from le
 
 /* 8) !! (2 && 3) === (2 && 3)? //no
 
-// ...2 && 3... mean that always return last value // in this case 3 // 
+// ...2 && 3... mean that always return last value // in this case 3 //
 
 // alert( null || 2 && 3 || 4); // 3 // "&&" is more priority then "||" // (just search in internet "приорітети в js" and so on) //
 // alert( undefined || 2 && "vasya" || 4); // vasya // важлива річ: "||" запинається на "правді" і як тільки він дійшов до значення з "true" то він далі не читає код бо немає потреби // (так само тільки навпки з "&&", як тільки  знаходить "брехню" то перестає читати код далі) //
@@ -404,13 +455,13 @@ console.log(2 && 1 && null && 0 && undefined); // browser read this code from le
 */
 
 
-/* 9) it's true that a === b? //no // це дві окремі коробки з інформацією і не має значення те що в них вона однакова   
+/* 9) it's true that a === b? //no // це дві окремі коробки з інформацією і не має значення те що в них вона однакова
 
-// якби там було const a = []; then const b = a; от тоді це було б одне і те ж 
+// якби там було const a = []; then const b = a; от тоді це було б одне і те ж
 
 
 const a = [1, 2, 3];
-const b = [1, 2, 3]; 
+const b = [1, 2, 3];
 
 console.log(a);  // [1, 2, 3] not the same
 console.log(b); // [1, 2, 3] not the same
@@ -427,7 +478,7 @@ alert( +"Infinity" ) // Infinity but if i type "vasya" or smth result: "NaN"
 */
 
 
-/* 11) true or false ("Ёжик" > "яблоко") 
+/* 11) true or false ("Ёжик" > "яблоко")
 //check UNICODE in google search
 
 console.log("яблоко" > "Ёжик"); // true
@@ -469,11 +520,11 @@ console.log( 0 || "" || 2 || undefined || true || false ); // 2
 
 // To string
 // 1)
-/* 
+/*
 let vasya = 25;
 console.log(typeof(String(vasya))); // string
 console.log(typeof(vasya)); // number
-console.log(String(vasya)); // 25 // the same like <console.log(vasya);> //  
+console.log(String(vasya)); // 25 // the same like <console.log(vasya);> //
 */
 
 // 2)
@@ -567,7 +618,7 @@ console.log(typeof(!!"44444")); // also boolean // but this method rarely used
 //
 
 // 3 bad //
-    /* john.__proto__ = soldiers; */ // it's very old method, not usually use ^^ here alternative ^^//
+/* john.__proto__ = soldiers; */ // it's very old method, not usually use ^^ here alternative ^^//
 //
 
 /* const john = {
@@ -622,11 +673,11 @@ console.log(internet); */ // the best thing '...' and then name of const //
 
 const num = [2, 5, 7];
 
-log(...num); */ 
+log(...num); */
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/* 
+/*
 const array = ["a", "b"];
 const newArray = [...array];
 newArray[0] = "c";
@@ -666,7 +717,7 @@ const copy = obj;
 copy.a = 10;
 
 console.log(copy);
-console.log(obj); */ // this example how it doesn't works in difficult things like this and arrayes // 
+console.log(obj); */ // this example how it doesn't works in difficult things like this and arrayes //
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // i write down example where it works with anything, but notice that it is only поверхосной тип copy(not global: "x" doesn't change) ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -757,7 +808,7 @@ console.log(newArrey); */
 
 
 //ARRAYES (масиви) //
-/* 
+/*
 const arr = [1, 33, 24, 5, 8];
 
 arr.sort(compareNum);
@@ -768,13 +819,13 @@ function compareNum(a, b) {
 
 console.log(arr); */
 
-/* 
+/*
 // arr.pop();
-// arr.push(10); 
+// arr.push(10);
  */
 
 
-/* 
+/*
 arr[99] = 0;
 console.log(arr.length);
 console.log(arr);
@@ -793,7 +844,7 @@ for (let i = 0; i < arr.length; i++) {
 for (let value of arr) {
     console.log(value);
 }
-// 
+//
 */
 
 // або так  але можна більш точніше насторїти because it`s callback function //
@@ -864,7 +915,7 @@ console.log(products.join("; ")); */
     }
 }
 
-options.makeTest(); 
+options.makeTest();
 
 const {border, bg} = options.colors; // destructuring code, the first thing, we type what do we want to get then type from what object we will do this
 
@@ -904,7 +955,7 @@ console.log(counter); */
 
 // MY PERSONAL OBJECT LIKE ^^ //
 
-/* 
+/*
 const features = {
     name: 'hello',
     age: 23,
@@ -967,7 +1018,7 @@ console.log(features); */
 
 // CALLBACK FUNCTION //
 
-/* 
+/*
 function learnJS(lang, callback) {
     console.log(`Я вчу ${lang}!`);
     callback();
@@ -993,12 +1044,12 @@ learnJS('JavaScript', done); // now i type function 'done' without "()" ( like: 
 
 
 
-    
 
 
 
- 
- 
+
+
+
 
 
 
