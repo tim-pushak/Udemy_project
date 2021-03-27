@@ -1,14 +1,32 @@
 "use strict";
 
 
+
+
+// (51) json format a push of the data
+
+/* const persone = {
+    name: 'Alex',
+    tel: '8 800 355 35 35'
+};
+
+console.log(JSON.stringify(persone));
+console.log(JSON.parse(JSON.stringify(persone))); */
+
+
+
+
+// (50) it's about servers (mamp)
+
+
 // (49) ...rest operator
 
-const log = function (a, b, ...rest) {
+/* const log = function (a, b, ...rest) {
     console.log(a, b, rest);
 }
 
 log('basic', 'rest', 'operator', 'usage');
-log('basic', 'rest', 'олмтвы', 'мфынф');
+log('basic', 'rest', 'олмтвы', 'мфынф'); */
 
 
 // other code in big project
