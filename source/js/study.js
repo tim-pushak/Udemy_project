@@ -17,7 +17,7 @@ inputRub.addEventListener('input', () => {
     const request = new XMLHttpRequest();
 
     // request.open(method, url, async, loigin, pass);
-    request.open('GET', 'js/current.json');
+    request.open('GET', 'js/current1.json');
     request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
     request.send();
 
