@@ -1,6 +1,21 @@
 "use strict";
 
 
+// (55) Promises
+
+// const req = new Promise (resolve, reject => {
+
+//});
+
+// req.then - resolve
+// req.catch - reject
+
+// req.finally - наприклад може бути не важливо чи коректно надіслалась форма на сервер але шо так шо так всерівно треба очистити форму, тому для цього є finally - console.log('clear') and so on ...
+/* 
+Promise.all([]);
+Promise.race([]);
+ - "all" will done when everything is done, "race" will done when "first argument" will done */
+
 
 
 // (52) Ajax & server
@@ -8,7 +23,7 @@
 // XMLHttpRequest()  
 // 'readystatechange', () => {};
 
-const inputRub = document.querySelector('#rub'),
+/* const inputRub = document.querySelector('#rub'),
       inputUsd = document.querySelector('#usd');
 
 inputRub.addEventListener('input', () => {
@@ -16,7 +31,7 @@ inputRub.addEventListener('input', () => {
 
 
     /* request.open('method', 'url', 'async', 'login', 'password'); */
-    request.open('GET', 'js/current.json');
+    /* request.open('GET', 'js/current.json');
     request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
     request.send();
 
@@ -30,13 +45,37 @@ inputRub.addEventListener('input', () => {
         }
     
     }); // відслідковує поточний стан запиту, (4 - readyState - done), (200 - status)
-
+ */
 
     //status (error 404 and so on check it in wikipedia)
     //statusText (ok, not found (404 ERROR))
     //response (відповідь, відповідь від сервера)
-    //readyState (поточний стан запиту, позначається цифрою)
+ /*    //readyState (поточний стан запиту, позначається цифрою)
+}); */
+
+
+const inputRub = document.querySelector('#rub'),
+      inputUsd = document.querySelector('#usd');
+
+inputRub.addEventListener('input', () => {
+    const request = new XMLHttpRequest();
+
+    request.open('GET', 'js/current.json');
+    request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+    request.send();
+
+    request.addEventListener('load', () => {
+        if (request.status === 200) {
+            console.log(request.response);
+            const data = JSON.parse(request.response);
+            inputUsd.value = (+inputRub.value / data.current.usd).toFixed(2);
+        } else {
+            inputUsd.value = "smth went wrong (";
+        }
+    });
 });
+
+
 
 
 

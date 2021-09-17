@@ -35,3 +35,4 @@ inputRub.addEventListener('input', () => {
     //response (відповідь, відповідь від сервера)
     //readyState (поточний стан запиту, позначається цифрою)
 });
+
