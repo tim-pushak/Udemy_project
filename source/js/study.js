@@ -1,6 +1,50 @@
 "use strict";
 
 
+// 57 Ways to find massives
+
+// .filter
+// .map
+// .some() / every()
+// .reduce()
+
+
+// filter()
+/* const names = ['Ivan', 'Ann', 'Valdemart', 'Ksenia'];
+
+const shortNames = names.filter(function(name) {
+    return name.length > 5;
+});
+
+console.log(shortNames);
+
+
+// map()
+const answers = ['IvAn', 'AnnA', 'Hello'];
+
+const result = answers.map(item => item.toLocaleLowerCase());
+console.log(result);
+
+
+//some/every
+const some = [4, 'tesf', 'tsegaehrea'];
+
+console.log(some.some(item => typeof(item) === 'number')); // важливе правило... якщо немає {} значить return підставляється автоматично. 
+console.log(some.every(item => typeof(item) === 'number'));
+
+
+// reduce()
+
+/* const arr = [4, 5, 6, 7, 3, 10, 15];
+const res = arr.reduce((sum, current) => sum + current);
+console.log(res); 
+
+const arr = ['apple', 'plum', 'cucumber'];
+const res = arr.reduce((sum, current) => `${sum}, ${current}`); // or sum + ', ' + current;
+console.log(res); */
+
+
+
 // (55) Promises
 
 // const req = new Promise (resolve, reject => {
@@ -54,26 +98,26 @@ inputRub.addEventListener('input', () => {
 }); */
 
 
-const inputRub = document.querySelector('#rub'),
-      inputUsd = document.querySelector('#usd');
+                            /* const inputRub = document.querySelector('#rub'),
+                                inputUsd = document.querySelector('#usd');
 
-inputRub.addEventListener('input', () => {
-    const request = new XMLHttpRequest();
+                            inputRub.addEventListener('input', () => {
+                                const request = new XMLHttpRequest();
 
-    request.open('GET', 'js/current.json');
-    request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-    request.send();
+                                request.open('GET', 'js/current.json');
+                                request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+                                request.send();
 
-    request.addEventListener('load', () => {
-        if (request.status === 200) {
-            console.log(request.response);
-            const data = JSON.parse(request.response);
-            inputUsd.value = (+inputRub.value / data.current.usd).toFixed(2);
-        } else {
-            inputUsd.value = "smth went wrong (";
-        }
-    });
-});
+                                request.addEventListener('load', () => {
+                                    if (request.status === 200) {
+                                        console.log(request.response);
+                                        const data = JSON.parse(request.response);
+                                        inputUsd.value = (+inputRub.value / data.current.usd).toFixed(2);
+                                    } else {
+                                        inputUsd.value = "smth went wrong (";
+                                    }
+                                });
+                            }); */
 
 
 
