@@ -1,5 +1,22 @@
 "use strict";
 
+// 59 async/await getting data from server
+
+// async ніколи не може бути без await запущене. 
+
+// const postData = async (url, data) => {
+//     const res = await fetch(url, {
+//         method: "POST",
+//         headers: {
+//             'Content-type': 'application-json'
+//         },
+//         body: data
+//     });
+
+//     return await res.json();
+// };
+
+
 // 58 npm json-server
 
 // fetch('http://localhost:3000/menu') // db.json (для того щоб зайти посилання в терміналі "npx json-server db.json")
