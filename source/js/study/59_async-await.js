@@ -15,3 +15,14 @@ const postData = async (url, data) => {
 
     return await res.json();
 };
+
+
+// щоб перебрати об'єкт треба спочатку (1)файл який збирає дані з форми (2)перетворити в масив масивів за допомогою entries, тоді взяти і (3)перетворити його в об'єкт і тоді (4)вже в json файл.
+const obj = {a:2, b:50};
+console.log(Object.entries(obj));
+
+const formData = new FormData(form);
+        //(1)//
+const json = JSON.stringify(Object.fromEntries(formData.entries()));
+            //(4)//          //(3)//                  //(2)//
+
