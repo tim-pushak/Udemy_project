@@ -1,5 +1,37 @@
 "use strict";
 
+// 69 Encapsulation
+ 
+function User(name, age) {
+    this.name = "Ivan";
+    let userAge = 27;
+
+    this.say = function() {
+        console.log(`Name of user: ${this.name}, age of user: ${userAge}`);
+    }
+
+    this.getAge = function() {
+        return userAge;
+    }
+
+    this.setAge = function(age) {
+        if(typeof age === 'number' && age > 0 && age < 110) {
+            return userAge;
+        } else {
+            console.log("Something went wrong");
+        }
+    } 
+}
+
+const ivan = new User('Ivan', 27);
+console.log(ivan.name);
+console.log(ivan.getAge());
+
+ivan.setAge(35);
+ivan.setAge(350);
+console.log(ivan.getAge);
+
+ivan.say();
 
 
 
@@ -8,14 +40,23 @@
 
 
 
+// 68 GETets and SETers
 
+const persone = {
+    name: "Vasya",
+    age: 25,
 
+    get userAge() {
+        return this.age;
+    },
 
+    set userAge(num) {
+        this.age = num;
+    }
+}
 
-
-
-
-
+console.log(persone.userAge = 30);
+console.log(persone.userAge);
 
 
 
