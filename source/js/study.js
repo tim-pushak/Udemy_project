@@ -1,18 +1,134 @@
 "use strict";
 
+
+// 80 requestAnimationFrame()
+
+// const bttn = document.querySelector('.bttn'),
+//       elem = document.querySelector('.boxDiv');
+// let pos = 0;
+
+// function myAnimation() {
+//     pos++;
+//     elem.style.top = pos + "px";
+//     elem.style.left = pos + 'px';
+
+//     if (pos < 300) {
+//         requestAnimationFrame(myAnimation);
+//     }
+// }
+
+// bttn.addEventListener('click', () => requestAnimationFrame(myAnimation));
+
+// // if i want to cancel the animation
+
+// let id = requestAnimationFrame(myAnimation);
+// cancelAnimationFrame(id);
+
+// Older code
+
+// const bttn = document.querySelector('.bttn');
+
+// function myAnimation() {
+//     const elem = document.querySelector('.boxDiv');
+//     let pos = 0;
+
+//     const id = setInterval(frame, 10);
+//     function frame() {
+//         if (pos == 300) {
+//             clearInterval(id);
+//         } else {
+//             pos++;
+//             elem.style.top = pos + "px";
+//             elem.style.left = pos + 'px';
+//         }
+//     }
+// }
+
+// bttn.addEventListener('click', myAnimation);
+
+
+// 79 Functions generetors
+
+// function* generetor () {
+//     yield 'S';
+//     yield 'c';
+//     yield 'r';
+//     yield 'i';
+//     yield 'p';
+//     yield 't';
+// }
+
+// const str = generetor();
+
+// console.log(str.next().value);
+// console.log(str.next());
+// console.log(str.next());
+// console.log(str.next());
+// console.log(str.next());
+// console.log(str.next());
+// console.log(str.next());
+
+
+// function* count (n) {
+//     for (let i = 0; i < n; i++) {
+//         yield i;
+//     }
+// }
+
+// for (let k of count(7)) {
+//     console.log(k);
+// }
+
+// or
+
+// const counter = count(7);
+
+// console.log(counter.next().value);
+// console.log(counter.next().value);
+// console.log(counter.next().value);
+// console.log(counter.next().value);
+// console.log(counter.next().value);
+// console.log(counter.next().value);
+// console.log(counter.next().value);
+// console.log(counter.next());
+// console.log(counter.next());
+
+
+
+
+
+// 75 Mistakes
+
+// try {
+//     console.log("Normal");
+//     console.log(a);
+//     console.log("result");
+// } catch (error) {
+//     console.log(error);
+//     console.log(error.name);
+//     console.log(error.message);
+//     console.log(error.stack);
+// } finally {
+//     //code will work anyway
+// }
+
+// console.log('still normal');
+
+
+
 // 70 Modules and privat information
 
-const user = (function(){
-    const privat = function() {
-        console.log('I am a privat');
-    }
+// const user = (function(){
+//     const privat = function() {
+//         console.log('I am a privat');
+//     }
 
-    return {
-        sayHello: privat
-    };
-}())
+//     return {
+//         sayHello: privat
+//     };
+// }())
 
-user.sayHello();
+// user.sayHello();
 
 
 
