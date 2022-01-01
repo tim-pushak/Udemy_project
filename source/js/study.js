@@ -1,38 +1,95 @@
 "use strict";
 
+// 70 Modules and privat information
+
+const user = (function(){
+    const privat = function() {
+        console.log('I am a privat');
+    }
+
+    return {
+        sayHello: privat
+    };
+}())
+
+user.sayHello();
+
+
+
+
+
+
+
 // 69 Encapsulation
  
-function User(name, age) {
-    this.name = "Ivan";
-    let userAge = 27;
+// function User(name, age) {
+//     this.name = "Ivan";
+//     let userAge = 27;
 
-    this.say = function() {
-        console.log(`Name of user: ${this.name}, age of user: ${userAge}`);
-    }
+//     this.say = function() {
+//         console.log(`Name of user: ${this.name}, age of user: ${userAge}`);
+//     }
 
-    this.getAge = function() {
-        return userAge;
-    }
+//     this.getAge = function() {
+//         return userAge;
+//     }
 
-    this.setAge = function(age) {
-        if(typeof age === 'number' && age > 0 && age < 110) {
-            return userAge;
-        } else {
-            console.log("Something went wrong");
-        }
-    } 
-}
+//     this.setAge = function(age) {
+//         if(typeof age === 'number' && age > 0 && age < 110) {
+//             userAge = age;
+//         } else {
+//             console.log("Something went wrong");
+//         }
+//     } 
+// }
 
-const ivan = new User('Ivan', 27);
-console.log(ivan.name);
-console.log(ivan.getAge());
+// const ivan = new User('Ivan', 27);
+// console.log(ivan.name);
+// console.log(ivan.getAge());
 
-ivan.setAge(35);
-ivan.setAge(350);
-console.log(ivan.getAge);
+// ivan.setAge(35);
+// ivan.setAge(350);
+// console.log(ivan.getAge());
 
-ivan.say();
+// ivan.say();
 
+
+
+
+
+
+
+
+// class User {
+//     constructor(name, age) {
+//         this.name = name;
+//         this._age = age;
+//     }
+
+//     say() {
+//         console.log(`Name of user: ${this.name}, age of user ${this._age}`);
+//     }
+
+//     get age() {
+//         return this._age;
+//     }
+
+//     set age(age) {
+//         if (typeof age === 'number' && age > 0 && age < 110) {
+//             this._age = age;
+//         } else {
+//             console.log('Smth went wrong');
+//         }
+//     }
+// }
+
+// const ivan = new User('Vasya', 30);
+
+// console.log(ivan._age);
+// ivan.age = 99;
+// console.log(ivan._age);
+
+// ivan.say();
 
 
 
@@ -42,21 +99,21 @@ ivan.say();
 
 // 68 GETets and SETers
 
-const persone = {
-    name: "Vasya",
-    age: 25,
+// const persone = {
+//     name: "Vasya",
+//     age: 25,
 
-    get userAge() {
-        return this.age;
-    },
+//     get userAge() {
+//         return this.age;
+//     },
 
-    set userAge(num) {
-        this.age = num;
-    }
-}
+//     set userAge(num) {
+//         this.age = num;
+//     }
+// }
 
-console.log(persone.userAge = 30);
-console.log(persone.userAge);
+// console.log(persone.userAge = 30);
+// console.log(persone.userAge);
 
 
 
